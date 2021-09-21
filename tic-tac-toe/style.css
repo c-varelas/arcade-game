@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    color: red;
+    font-size: 40px;
+    box-shadow: 6px 6px 12px 0px #E63E61;
+    font-family: 'Fredoka One', cursive;
+  }
+  
+  body {
+    text-align: center;
+    background-color: #2B87E3;
+  }
+  
+  
+  footer {
+    display: flex;
+    justify-content: left;
+    color:white;
+  }
+  
+  
+  #app {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  #board {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 50vh;
+    width: 50vh;
+    align-self: center;
+    justify-self: center;
+    background-color:#6CFA4F ;
+  }
+  
+  .cell {
+    font-size: 60px;
+    flex: 0 0 120px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    box-shadow: 6px 6px 12px 0px #E63E61; 
+  }
+  
+  .cell:nth-child(3n + 2) {
+    border-left: 3px solid #E63E61;
+    border-right: 3px solid #E63E61;
+  }
+  
+  .cell:nth-child(n+4):nth-child(-n+6) {
+    border-top: 3px solid #E63E61;
+    border-bottom: 3px solid #E63E61;
+  }
+  
+  #reset {
+    margin-top: 40px;
+    padding: 10px 20px;
+    background-color: #6CFA4F;
+  }
+  
+  #message {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    color: #6CFA4F;
+    font-family: 'Fredoka One', cursive;
+  }
