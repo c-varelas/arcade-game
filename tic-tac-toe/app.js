@@ -1,3 +1,5 @@
+/* PLAY WITH A COMPUTER TO BE BUILT */
+
 const gameState = {
     players: ['❌', '⭕️'],
     board:  [
@@ -20,7 +22,15 @@ let currentPlayer = gameState.players[1];
         $('#board').append(cellElem)
       })
     })
-    isItADraw()
+    isItADraw();
+    winningCombosOne();
+    winningCombosTwo();
+    winningCombosThree();
+    winningCombosFour();
+    winningCombosFive();
+    winningCombosSix();
+    winningCombosSeven();
+    winningCombosEight();
 }
 
 const switchPlayer = () => {
@@ -30,6 +40,10 @@ const switchPlayer = () => {
     currentPlayer = '⭕️';
   }
 };
+
+const switchPlayerMessage = () => {
+  document.getElementById('player').innerHTML = `<h2> It Is Player ${currentPlayer}'s Turn </h2>`
+}
 
 function onBoardClick()  {
   const clicked = $(this).data('location')
@@ -41,6 +55,7 @@ function onBoardClick()  {
     }
   }
  switchPlayer();
+ switchPlayerMessage();
  renderState();
 }
 
@@ -53,15 +68,140 @@ const isItADraw = () => {
         tieCount++
         if (tieCount === 9) {
           document.getElementById('message').innerHTML = `<h2>And We Have A Tie!</h2>`
+          $('#player').empty();
         }
       } 
     })
   })
 }
 
+const winningCombosOne = () => {
+  for(let i = 0; i < gameState.board.length; i++) {
+    if (gameState.board[0][0] === '' || gameState.board[0][1] === '' || gameState.board[0][2] === '') {
+      continue;
+    }
+    if (gameState.board[0][0] === gameState.board[0][1] && gameState.board[0][1] === gameState.board[0][2]) {
+      document.getElementById('winnerAnnoucement').innerHTML = `<h2> Player ${currentPlayer} Is The Winner Chicken Dinner!</h2>`
+      $('#player').empty();
+      winner = true;
+      break;
+    }
+  }
+}
 
-/* Winning Combinations and Restart Button to be Completed */
+const winningCombosTwo = () => {
+  for(let i = 0; i < gameState.board.length; i++) {
+    if (gameState.board[1][0] === '' || gameState.board[1][1] === '' || gameState.board[1][2] === '') {
+      continue;
+    }
+    if (gameState.board[1][0] === gameState.board[1][1] && gameState.board[1][1] === gameState.board[1][2]) {
+      document.getElementById('winnerAnnoucement').innerHTML = `<h2> Player ${currentPlayer} Is The Winner Chicken Dinner!</h2>`
+      $('#player').empty();
+      winner = true;
+      break;
+    }
+  }
+}
+
+const winningCombosThree = () => {
+  for(let i = 0; i < gameState.board.length; i++) {
+    if (gameState.board[2][0] === '' || gameState.board[2][1] === '' || gameState.board[2][2] === '') {
+      continue;
+    }
+    if (gameState.board[2][0] === gameState.board[2][1] && gameState.board[2][1] === gameState.board[2][2]) {
+      document.getElementById('winnerAnnoucement').innerHTML = `<h2> Player ${currentPlayer} Is The Winner Chicken Dinner!</h2>`
+      $('#player').empty();
+      winner = true;
+      break;
+    }
+  }
+}
+
+const winningCombosFour= () => {
+  for(let i = 0; i < gameState.board.length; i++) {
+    if (gameState.board[0][0] === '' || gameState.board[1][0] === '' || gameState.board[2][0] === '') {
+      continue;
+    }
+    if (gameState.board[0][0] === gameState.board[1][0] && gameState.board[1][0] === gameState.board[2][0]) {
+      document.getElementById('winnerAnnoucement').innerHTML = `<h2> Player ${currentPlayer} Is The Winner Chicken Dinner!</h2>`
+      $('#player').empty();
+      winner = true;
+      break;
+    }
+  }
+}
+
+const winningCombosFive = () => {
+  for(let i = 0; i < gameState.board.length; i++) {
+    if (gameState.board[0][1] === '' || gameState.board[1][1] === '' || gameState.board[2][1] === '') {
+      continue;
+    }
+    if (gameState.board[0][1] === gameState.board[1][1] && gameState.board[1][1] === gameState.board[2][1]) {
+      document.getElementById('winnerAnnoucement').innerHTML = `<h2> Player ${currentPlayer} Is The Winner Chicken Dinner!</h2>`
+      $('#player').empty();
+      winner = true;
+      break;
+    }
+  }
+}
+
+const winningCombosSix = () => {
+  for(let i = 0; i < gameState.board.length; i++) {
+    if (gameState.board[0][2] === '' || gameState.board[1][2] === '' || gameState.board[2][2] === '') {
+      continue;
+    }
+    if (gameState.board[0][2] === gameState.board[1][2] && gameState.board[1][2] === gameState.board[2][2]) {
+      document.getElementById('winnerAnnoucement').innerHTML = `<h2> Player ${currentPlayer} Is The Winner Chicken Dinner!</h2>`
+      $('#player').empty();
+      winner = true;
+      break;
+    }
+  }
+}
+
+const winningCombosSeven = () => {
+  for(let i = 0; i < gameState.board.length; i++) {
+    if (gameState.board[0][0] === '' || gameState.board[1][1] === '' || gameState.board[2][2] === '') {
+      continue;
+    }
+    if (gameState.board[0][0] === gameState.board[1][1] && gameState.board[1][1] === gameState.board[2][2]) {
+      document.getElementById('winnerAnnoucement').innerHTML = `<h2> Player ${currentPlayer} Is The Winner Chicken Dinner!</h2>`
+      $('#player').empty();
+      winner = true;
+      break;
+    }
+  }
+}
+
+const winningCombosEight = () => {
+  for(let i = 0; i < gameState.board.length; i++) {
+    if (gameState.board[0][2] === '' || gameState.board[1][1] === '' || gameState.board[2][0] === '') {
+      continue;
+    }
+    if (gameState.board[0][2] === gameState.board[1][1] && gameState.board[1][1] === gameState.board[2][0]) {
+      document.getElementById('winnerAnnoucement').innerHTML = `<h2> Player ${currentPlayer} Is The Winner Chicken Dinner!</h2>`
+      $('#player').empty();
+      winner = true;
+      break;
+    }
+  }
+}
 
 $('#app').on('click', '.cell', onBoardClick)
+
+$('#reset').click(function () {
+  $('#board').empty();
+  $('#message').empty();
+  $('#player').empty();
+  $('#winnerAnnoucement').empty();
+
+  gameState.board = [
+    ['', '', ''],
+    ['', '', ''],
+    ['', '', '']
+  ]
+  renderState();
+
+})
 
 renderState();

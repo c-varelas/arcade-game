@@ -15,10 +15,13 @@
   }
   
   
-  footer {
+  footer a {
     display: flex;
     justify-content: left;
-    color:white;
+    font-family: 'Fredoka One', cursive;
+    text-decoration: none;
+    color:#E63E61;
+    
   }
   
   
@@ -61,7 +64,10 @@
   #reset {
     margin-top: 40px;
     padding: 10px 20px;
+    font-family: 'Fredoka One', cursive;
+    color: #2B87E3;
     background-color: #6CFA4F;
+    box-shadow: 6px 6px 12px 0px #E63E61; 
   }
   
   #message {
@@ -73,3 +79,24 @@
     color: #6CFA4F;
     font-family: 'Fredoka One', cursive;
   }
+
+  #winnerAnnoucement {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    color: #6CFA4F;
+    font-family: 'Fredoka One', cursive;
+  }
+
+  #player {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    color: #6CFA4F;
+    font-family: 'Fredoka One', cursive;
+  }
+
