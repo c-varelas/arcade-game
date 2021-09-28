@@ -6,7 +6,9 @@ const gameState = {
       ['', '', ''],
       ['', '', ''],
       ['', '', '']
-  ]
+  ],
+  computer: '',
+  single : ''
   }
 
 let winner = false;
@@ -53,6 +55,9 @@ function onBoardClick()  {
     } else {
       gameState.board[clicked[0]][clicked[1]] = gameState.players[1]
     }
+  }
+  if(gameState.computer === $('#computer') ) {
+    isItComputerMode();
   }
  switchPlayer();
  switchPlayerMessage();
@@ -186,6 +191,9 @@ const winningCombosEight = () => {
     }
   }
 }
+
+
+//Click Functions 
 
 $('#app').on('click', '.cell', onBoardClick)
 
