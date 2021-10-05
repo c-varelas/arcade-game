@@ -14,7 +14,7 @@ const gameState = {
 let winner = false;
 let currentPlayer = gameState.players[1];
 
-  const renderState = ()  =>{
+  const renderState = ()  => {
     const app = $('#app');
     $('#board').empty();
     gameState.board.forEach(function(row, y){

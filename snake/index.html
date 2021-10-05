@@ -14,31 +14,40 @@
     <script defer src="app.js"></script>
 </head>
 <body>
-    <h1> &#128013 Welcome, to Snake &#127822 </h1>
+    <h1 id="heading"> &#128013 Welcome, to Snake &#127822 </h1>
     <main id="app">
+
         <div id="scores">
-            <div id="current">Current Score</div>
+            <div id="current">Current Score: </div>
             <div id="current-value">0</div>
-            <div id="best">Best Score</div>
+            <div id="best">Best Score:</div>
             <div id="best-value">0</div>
         </div>
-        <div id="board"></div>
-        <div gameOptions>
-            <h2>Choose An Option &#128013</h2>
-            <button id="easyMode">Easy Mode</button>
-            <button id="hardMode">Hard Mode</button>
+        
+        <div id="gameOptions">
+            <div id="gameOptionsButtons">
+                <h2>Choose An Option &#128013</h2>
+                <button id="easyMode">Easy Mode</button>
+                <button id="hardMode">Hard Mode</button>
+            </div>
+
+            <div id="board"></div>
+
+            <div id="scoreBoard">
+                <div id="scoreBoardNumbs"> <h2>Score Board</h2>
+                    <div class="scores">1️⃣</div>
+                    <div class="scores" id="scores1"></div>
+                    <div class="scores">2️⃣ </div>
+                    <div class="scores" id="scores2"></div>
+                    <div class="scores">3️⃣ </div>
+                    <div class="scores" id="scores3"></div>
+                    <div class="scores">4️⃣</div>
+                    <div class="scores" id="scores4"></div>
+                    <div class="scores">5️⃣</div>
+                    <div class="scores" id="scores5"></div>
+                </div>
+            </div>            
         </div>
-        <div id="scoreBoard"><h2>Score Board</h2></div>
-        <div class="scores">1️⃣</div>
-        <div class="scores" id="scores1"></div>
-        <div class="scores">2️⃣ </div>
-        <div class="scores" id="scores2"></div>
-        <div class="scores">3️⃣ </div>
-        <div class="scores" id="scores3"></div>
-        <div class="scores">4️⃣</div>
-        <div class="scores" id="scores4"></div>
-        <div class="scores">5️⃣</div>
-        <div class="scores" id="scores5"></div>
     </main>
     <footer>
     <a href="/Arcade/index.html">Return to Home Page </a>

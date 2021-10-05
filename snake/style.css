@@ -1,0 +1,135 @@
+/* still need to fix styling issues */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #2B87E3;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vh;
+}
+
+#heading {
+    color: #E63E61;
+    font-size: 40px;
+    box-shadow: 6px 6px 12px 0px #E63E61;
+    text-align: center;
+    margin: auto;
+}
+
+#gameOptions {
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+}
+
+#gameOptionsButtons {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameOptionsButtons h2 {
+    margin: 10px;
+    color:  #E63E61;
+    font-size: 30px;
+}
+
+#easyMode {
+    outline: none;
+    margin: 10px;
+    padding: 10px;
+    background-color: #6CFA4F;
+    color: #2B87E3;
+    border: 2px solid #2B87E3;
+    font-size: 1.5em;
+    box-shadow: 6px 6px 12px 0px #E63E61;
+}
+
+#easyMode:active {
+    background-color:#E63E61;
+}
+
+#hardMode {
+    outline:none;
+    margin: 10px;
+    padding: 10px;
+    background-color: #6CFA4F;
+    color: #2B87E3;
+    border: 2px solid #2B87E3;
+    font-size: 1.5em;
+    box-shadow: 6px 6px 12px 0px #E63E61;
+}
+
+#hardMode:active {
+    background-color:#E63E61;
+}
+
+#board {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    margin: auto;
+    margin-bottom: 15px;
+    height: 600px;
+    width: 600px;
+    background-color: #6CFA4F;
+    border: 4px solid #E63E61;
+
+}
+
+#scoreBoard {
+    grid-column: 3 / 4;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scoreBoardNumbs{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    border: 2px solid #E63E61;
+    color: #E63E61;
+    font-size: 2rem;
+    width: 200px;
+}
+
+.scores {
+    width: 100px;
+}
+
+#scores {
+    display: grid;
+    grid-template-columns: 455px 1fr 1fr 1fr 1fr 455px;
+    justify-items: end;
+    color: #E63E61;
+    font-size: 30px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#current {
+    grid-column: 2 / 3;
+}
+
+#current-value {
+    grid-column: 3 / 4;
+}
+
+#best {
+    grid-column: 4 / 5;
+}
+
+#best-value {
+    grid-column: 5 / 6;
+}
