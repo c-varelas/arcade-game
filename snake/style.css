@@ -1,19 +1,15 @@
-/* still need to fix styling issues */
 
 * {
     padding: 0;
     margin: 0;
 }
 
-body {
-    background-color: #2B87E3;
-}
-
 #app {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
+    background-color: #2B87E3;
 }
 
 #heading {
@@ -22,6 +18,7 @@ body {
     box-shadow: 6px 6px 12px 0px #E63E61;
     text-align: center;
     margin: auto;
+    background-color: #2B87E3;
 }
 
 #gameOptions {
@@ -73,7 +70,7 @@ body {
     background-color:#E63E61;
 }
 
-#board {
+#board{
     display: grid;
     grid-column: 2 / 3;
     grid-template-columns: repeat(20, 1fr);
@@ -118,18 +115,33 @@ body {
     margin-bottom: 12px;
 }
 
-#current {
+#current-score {
     grid-column: 2 / 3;
 }
 
-#current-value {
+#current-score-value {
     grid-column: 3 / 4;
 }
 
-#best {
+#best-score {
     grid-column: 4 / 5;
 }
 
-#best-value {
+#best-score-value {
     grid-column: 5 / 6;
+}
+
+.food {
+    background-color: #E63E61;
+    border-radius: 100%;
+}
+
+.snake {
+    background-color: #2B87E3;
+    border-radius: 100%;
+}
+
+.dead {
+    background-color: #E63E61;
+    border-radius: 100%;
 }
